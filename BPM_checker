@@ -1,0 +1,36 @@
+print('\t\t\t✨ Welcome ✨\n')
+age = int(input('\t\tEnter your age ➡️\t'))
+if age >= 18:
+    print('\t\tYou are adult\n\t\tYour BPM code is  [a]')
+elif 6 < age <= 17:
+    print('\t\tYou are Teenager\n\t\tYour BPM code is  [t]\n')
+elif 6 >= age >= 0:
+    print('\t\tYou are infant \n\t\tYour BPM code is  [i]\n')
+else:
+    print('\t\tInvalid age enter number from 0 neither -ve nor decimal\n')
+
+cd = (input('\t\tEnter your BPM  code ➡️\t'))
+
+if cd == 'a':
+    bpm1 = int(input('\t\tEnter your BPM rate ➡️\t'))
+    if  60 <= bpm1 <= 100:
+        print('\t\tYou are Healthy ✅\n')
+    else:
+        print('\t\tYou are not Healthy ❌\n')
+        
+elif cd == 't':
+    bpm2 = int(input('\t\tEnter Your BPM rate ➡️\t'))
+    if 70 <= bpm2 <= 100:
+        print('\t\tYou are  Healthy ✅\n')
+    else:
+        print('\t\tYou are not Healthy ❌\n')
+        
+elif cd == 'i':
+    bpm3 = int(input('\t\tEnter your BPM rate ➡️\t'))
+    if 100 <= bpm3 <= 180:
+        print('\t\tYou are Healthy ✅\n')
+    else:
+        print('\t\tYou are not Healthy ❌\n')
+else:
+    print('\t\t\tInvalid Code \n')
+    
