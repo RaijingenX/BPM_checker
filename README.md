@@ -116,7 +116,7 @@ No external libraries are required.
 
 ## 👨‍💻 Author
 
-**HerobrinegenX**
+**RaijingenX**
 
 ---
 
