@@ -1,64 +1,73 @@
-print("\t\t\t✨ Welcome to BPM Checker ✨\n")
+while True:
 
-age = int(input("\t\tEnter your age ➡️   "))
+    print('\n', '\n')
+    print("\t\t\t✨ Welcome to BPM Checker ✨\n")
 
-# Age Category
-if 0 <= age <= 6:
-    print("\t\tYou are Infant")
-    print("\t\tYour BPM code is [i]\n")
+    age = int(input("\t\tEnter your age ➡️   "))
 
-elif 7 <= age <= 17:
-    print("\t\tYou are Teenager")
-    print("\t\tYour BPM code is [t]\n")
+    # Age Category
+    if 0 <= age <= 6:
+        print("\t\tYou are Infant")
+        print("\t\tYour BPM code is [i]\n")
 
-elif age >= 18:
-    print("\t\tYou are Adult")
-    print("\t\tYour BPM code is [a]\n")
+    elif 7 <= age <= 17:
+        print("\t\tYou are Teenager")
+        print("\t\tYour BPM code is [t]\n")
 
-else:
-    print("\t\t❌ Invalid age!")
-    exit()
-
-cd = input("\t\tEnter your BPM code ➡️   ").lower()
-
-# Adult
-if cd == "a":
-    bpm = int(input("\t\tEnter your BPM rate ➡️ "))
-
-    if 60 <= bpm <= 100:
-        print("\n\t\t🟢 Status : Healthy")
-
-    elif 50 <= bpm <= 59 or 101 <= bpm <= 120:
-        print("\n\t\t🟡 Status : Not Healthy")
+    elif age >= 18:
+        print("\t\tYou are Adult")
+        print("\t\tYour BPM code is [a]\n")
 
     else:
-        print("\n\t\t🔴 Status : Risky")
+        print("\t\t❌ Invalid age!")
+        break
 
-# Teenager
-elif cd == "t":
-    bpm = int(input("\t\tEnter your BPM rate ➡️   "))
+    cd = input("\t\tEnter your BPM code ➡️   ").lower()
 
-    if 70 <= bpm <= 100:
-        print("\n\t\t🟢 Status : Healthy")
+    # Adult
+    if cd == "a":
+        bpm = int(input("\t\tEnter your BPM rate ➡️ "))
 
-    elif 60 <= bpm <= 69 or 101 <= bpm <= 110:
-        print("\n\t\t🟡 Status : Not Healthy")
+        if 60 <= bpm <= 100:
+            print("\n\t\t🟢 Status : Healthy")
+
+        elif 50 <= bpm <= 59 or 101 <= bpm <= 120:
+            print("\n\t\t🟡 Status : Not Healthy")
+
+        else:
+            print("\n\t\t🔴 Status : Risky")
+
+    # Teenager
+    elif cd == "t":
+        bpm = int(input("\t\tEnter your BPM rate ➡️   "))
+
+        if 70 <= bpm <= 100:
+            print("\n\t\t🟢 Status : Healthy")
+
+        elif 60 <= bpm <= 69 or 101 <= bpm <= 110:
+            print("\n\t\t🟡 Status : Not Healthy")
+
+        else:
+            print("\n\t\t🔴 Status : Risky")
+
+    # Infant
+    elif cd == "i":
+        bpm = int(input("\t\tEnter your BPM rate ➡️ "))
+
+        if 100 <= bpm <= 180:
+            print("\n\t\t🟢 Status : Healthy")
+
+        elif 90 <= bpm <= 99 or 181 <= bpm <= 190:
+            print("\n\t\t🟡 Status : Not Healthy")
+
+        else:
+            print("\n\t\t🔴 Status : Risky")
 
     else:
-        print("\n\t\t🔴 Status : Risky")
+        print("\n\t\t❌ Invalid BPM code!")
 
-# Infant
-elif cd == "i":
-    bpm = int(input("\t\tEnter your BPM rate ➡️ "))
+    again = input("\n\t\tCheck another person? (y/n) ➡️   ").lower()
 
-    if 100 <= bpm <= 180:
-        print("\n\t\t🟢 Status : Healthy")
-
-    elif 90 <= bpm <= 99 or 181 <= bpm <= 190:
-        print("\n\t\t🟡 Status : Not Healthy")
-
-    else:
-        print("\n\t\t🔴 Status : Risky")
-
-else:
-    print("\n\t\t❌ Invalid BPM code!")
+    if again != "y":
+        print("\n\t\t👋 Thank you for using BPM Checker!")
+        break
